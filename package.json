@@ -23,6 +23,7 @@
     "start": "serve -s build",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:ci": "CI=1 npm run test",
     "eject": "react-scripts eject",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "eslint . --fix --ext .js,.jsx,.ts,.tsx",

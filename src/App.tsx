@@ -9,7 +9,7 @@ const App: React.FC = () => {
   const CHAR_CODE_MAX = 95;
   const CHAR_CODE_MIN = 32;
 
-  const NUM_CHARS_IN_BOILERPLATE = 35;
+  const NUM_CHARS_IN_BOILERPLATE = "https://arcade-tweet.herokuapp.com/ #ArcadeTweet".length;
 
   const FORWARD = 1;
   const BACKWARD = -1;
@@ -23,7 +23,6 @@ const App: React.FC = () => {
 
     if (currentCharCode + direction > CHAR_CODE_MAX) {
       newTweet[charIndex] = CHAR_CODE_MIN;
-      console.log(newTweet[charIndex])
     } else if (currentCharCode + direction < CHAR_CODE_MIN) {
       newTweet[charIndex] = CHAR_CODE_MAX;
     } else {
@@ -41,11 +40,11 @@ const App: React.FC = () => {
     let message = tweet.slice(0, charIndex).map((it) => String.fromCharCode(it)).join('');
     return "https://twitter.com/intent/tweet?" +
             "hashtags=ArcadeTweet&" +
-            `original_referer=${encodeURI("https://arcade-tweet.herokuapp.com/")}` +
+            `original_referer=${encodeURI("https://arcade-tweet.herokuapp.com")}` +
             "ref_src=twsrc%5Etfw&" +
             `text=${encodeURI(message)}&` +
             "tw_p=tweetbutton&" +
-            `url=${encodeURI("https://arcade-tweet.herokuapp.com/")}`
+            `url=${encodeURI("https://arcade-tweet.herokuapp.com")}`
   };
 
   const ifEnter = (func: () => void) => {

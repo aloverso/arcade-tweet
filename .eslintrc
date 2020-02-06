@@ -1,0 +1,11 @@
+{
+  "parser": "babel-eslint",
+  "ignorePatterns": [
+    "serviceWorker.ts",
+    "node_modules/",
+    "setupTests.ts"
+  ],
+  "rules": {
+    "indent": [2, 2]
+  }
+}

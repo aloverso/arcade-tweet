@@ -41,11 +41,11 @@ const App: React.FC = () => {
     let message = tweet.slice(0, charIndex).map((it) => String.fromCharCode(it)).join('');
     return "https://twitter.com/intent/tweet?" +
             "hashtags=ArcadeTweet&" +
-            "original_referer=http%3A%2F%2Flocalhost%3A3000%2F&" +
+            `original_referer=${encodeURI("https://arcade-tweet.herokuapp.com/")}` +
             "ref_src=twsrc%5Etfw&" +
             `text=${encodeURI(message)}&` +
             "tw_p=tweetbutton&" +
-            "url=http%3A%2F%2Flocalhost%3A3000%2F"
+            `url=${encodeURI("https://arcade-tweet.herokuapp.com/")}`
   };
 
   const ifEnter = (func: () => void) => {

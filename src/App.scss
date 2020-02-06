@@ -56,6 +56,10 @@ body {
 
 .tweet-characters {
   width: 65%;
+
+  @media only screen and (max-device-width: 480px) {
+    width: 90%;
+  }
 }
 
 .material-icons, .twitter-logo {

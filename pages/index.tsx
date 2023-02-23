@@ -72,7 +72,7 @@ const Index = (): ReactElement => {
           onClick={() => cycle(BACKWARD)}
           onKeyUp={ifEnter(() => cycle(BACKWARD))}
         >
-          <ArrowDropUpIcon title="cycle backward" fontSize="inherit" sx={{ marginTop: "25%" }} />
+          <ArrowDropUpIcon titleAccess="cycle backward" fontSize="inherit" sx={{ marginTop: "25%" }} />
         </div>
         <div
           role="button"
@@ -81,7 +81,7 @@ const Index = (): ReactElement => {
           onClick={next}
           onKeyUp={ifEnter(next)}
         >
-          <CheckIcon title="next character" fontSize="inherit" sx={{ marginTop: "25%" }} />
+          <CheckIcon titleAccess="next character" fontSize="inherit" sx={{ marginTop: "25%" }} />
         </div>
       </div>
       <div>
@@ -92,7 +92,7 @@ const Index = (): ReactElement => {
           onClick={() => cycle(FORWARD)}
           onKeyUp={ifEnter(() => cycle(FORWARD))}
         >
-          <ArrowDropDownIcon title="cycle forward" fontSize="inherit" sx={{ marginTop: "25%" }} />
+          <ArrowDropDownIcon titleAccess="cycle forward" fontSize="inherit" sx={{ marginTop: "25%" }} />
         </div>
         <a tabIndex={0} href={getUrl()} title="tweet it">
           <div className="button-flat blue no-select">

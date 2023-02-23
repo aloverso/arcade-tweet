@@ -1,0 +1,17 @@
+@import "App.scss";
+
+@font-face {
+  font-family: "ARCADE_N";
+  src: local("ARCADE_N"), url(/fonts/ARCADE_N.TTF) format("truetype");
+}
+
+body {
+  font-family: ARCADE_N, sans-serif;
+  font-size: 48px;
+  background-color: #212121ff;
+  color: white;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}

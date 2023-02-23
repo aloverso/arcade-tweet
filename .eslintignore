@@ -1,0 +1,4 @@
+build/
+setupTests.ts
+.next
+node_modules/

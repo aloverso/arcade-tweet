@@ -9,7 +9,8 @@ const Index = (): ReactElement => {
   const CHAR_CODE_MAX = 95;
   const CHAR_CODE_MIN = 32;
 
-  const NUM_CHARS_IN_BOILERPLATE = "https://arcade-tweet.herokuapp.com/ #ArcadeTweet".length;
+  const BASE_URL="https://arcade-tweet.netlify.app"
+  const NUM_CHARS_IN_BOILERPLATE = `${BASE_URL} #ArcadeTweet`.length;
 
   const FORWARD = 1;
   const BACKWARD = -1;
@@ -44,11 +45,11 @@ const Index = (): ReactElement => {
     return (
       "https://twitter.com/intent/tweet?" +
       "hashtags=ArcadeTweet&" +
-      `original_referer=${encodeURI("https://arcade-tweet.herokuapp.com")}` +
+      `original_referer=${encodeURI(BASE_URL)}` +
       "ref_src=twsrc%5Etfw&" +
       `text=${encodeURI(message)}&` +
       "tw_p=tweetbutton&" +
-      `url=${encodeURI("https://arcade-tweet.herokuapp.com")}`
+      `url=${encodeURI(BASE_URL)}`
     );
   };
 

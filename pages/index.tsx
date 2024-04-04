@@ -9,7 +9,7 @@ const Index = (): ReactElement => {
   const CHAR_CODE_MAX = 95;
   const CHAR_CODE_MIN = 32;
 
-  const BASE_URL="https://arcade-tweet.netlify.app"
+  const BASE_URL = "https://arcade-tweet.netlify.app";
   const NUM_CHARS_IN_BOILERPLATE = `${BASE_URL} #ArcadeTweet`.length;
 
   const FORWARD = 1;
@@ -72,7 +72,11 @@ const Index = (): ReactElement => {
           onClick={() => cycle(BACKWARD)}
           onKeyUp={ifEnter(() => cycle(BACKWARD))}
         >
-          <ArrowDropUpIcon titleAccess="cycle backward" fontSize="inherit" sx={{ marginTop: "25%" }} />
+          <ArrowDropUpIcon
+            titleAccess="cycle backward"
+            fontSize="inherit"
+            sx={{ marginTop: "25%" }}
+          />
         </div>
         <div
           role="button"
@@ -92,7 +96,11 @@ const Index = (): ReactElement => {
           onClick={() => cycle(FORWARD)}
           onKeyUp={ifEnter(() => cycle(FORWARD))}
         >
-          <ArrowDropDownIcon titleAccess="cycle forward" fontSize="inherit" sx={{ marginTop: "25%" }} />
+          <ArrowDropDownIcon
+            titleAccess="cycle forward"
+            fontSize="inherit"
+            sx={{ marginTop: "25%" }}
+          />
         </div>
         <a tabIndex={0} href={getUrl()} title="tweet it">
           <div className="button-flat blue no-select">
